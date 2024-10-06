@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.signup-body {
+    background: url("../images/3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.signup-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.signup-nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
+    z-index: 100;
+}
+.signup-nav-logo p {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.signup-nav-menu ul {
+    display: flex;
+}
+.signup-nav-menu ul li {
+    list-style-type: none;
+}
+.signup-nav-menu ul li .signup-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.signup-link:hover, .signup-link.active {
+    border-bottom: 2px solid #fff;
+}
+.signup-form-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 512px;
+    height: 600px;
+    overflow: hidden;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+}
+.signup-header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.signup-input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+.signup-input-field:hover, .signup-input-field:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+.signup-input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+.signup-input-box i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+.signup-submit {
+    font-size: 15px;
+    background: #fff;
+    color: black;
+    height: 50px;
+    width: 100%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.signup-submit:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+.signup-role-box {
+    position: relative;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.signup-role-select {
+    width: 100%;
+    padding: 0 10px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Matching border radius */
+    outline: none;
+    font-size: 15px;
+    appearance: none; /* Hides the default dropdown arrow for better styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: .2s ease;
+}
+
+.signup-role-select:hover, .signup-role-select:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Optional: Adding a custom dropdown arrow */
+.signup-role-select {
+    padding-right: 30px; /* Space for custom arrow */
+}
+
+.signup-role-box::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 18px;
+    pointer-events: none;
+}

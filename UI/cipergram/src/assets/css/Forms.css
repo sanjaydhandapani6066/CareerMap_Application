@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.form-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: var(--text-color);
+    padding: 25px 20px;
+}
+
+.form-sidebar-header{
+    display: flex;
+    align-items: center;
+}
+
+
+.form-sidebar-header .form-logo{
+    padding: 3px 7px;
+    margin-inline: 5px;
+    font-size: 1rem;
+    background-color:  var(--backgroundColor) ;
+    color: var(--first-color);
+    border-radius: 100%;
+}
+
+.form-sidebar-header .form-logo.inactive{
+    display: none;
+}
+
+.form-sidebar-header h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--backgroundColor);
+    margin-left: 24px;
+}
+
+.form-user-info{
+    padding: 10px 10px;
+    margin-inline: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color:  var(--backgroundColor) ;
+    color: var(--first-color);
+    border-radius: 100%;
+}
+
+.form-sidebar-links{
+    list-style: none;
+    margin-top: 20px;
+    height: 80%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+
+.form-sidebar-links h4{
+    color: var(--backgroundColor);
+    font-weight: 500;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+.form-sidebar-links li a{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: var(--backgroundColor);
+    font-weight: 500;
+    padding: 15px 20px;
+    white-space: nowrap;
+}
+
+.form-sidebar-links li a:hover{
+    background: #ffffff2d;
+    color: var(--backgroundColor);
+    border-radius: 4px;
+}
+
+.form-user-account{
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.form-user-account .form-user-profile{
+    display: flex;
+    align-items: center;
+    color: var(--backgroundColor);
+}
+
+.form-user-account .form-user-detail{
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.form-user-profile h3{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-user-profile span{
+    font-size: 0.775rem;
+    font-weight: 600;
+}
+
+.forms-container{
+   width: calc(100% - 260px);
+   margin: 0 255px;  
+}
+
+.form-sidebar-links li a.form-active{
+    background-color: var(--backgroundColor);
+    color: var(--first-color);
+}
+
+.form-sidebar-links li a.form-active>span{
+    color: var(--first-color);
+}
+
+
+
+@media (width<768px){
+    .form-sidebar{
+        width: 75px;
+    }
+
+    .form-sidebar .form-sidebar-header h2,
+    .form-sidebar .form-sidebar-header .form-logo{
+        display: none;
+    }
+
+    .form-sidebar .form-sidebar-header .form-logo.inactive{
+        display: block;
+        background-color:  var(--first-color) ;
+        color: var(--backgroundColor);
+    }
+
+    .form-sidebar-links h4{
+        display: none;
+    }
+
+    .form-sidebar-links li a span{
+        font-size: 1.2rem;
+        font-weight: 600;   
+    }
+
+    .form-sidebar-links li a{
+        padding: 15px 10px;
+    }
+
+    .form-user-account{
+        margin-top: 20px;
+        padding: 12px 10px;
+        margin-left: -10px;
+    }
+
+    .form-user-profile .form-user-info{
+        margin-left: 0px;
+    }
+
+    .form-user-profile h3,
+    .form-user-profile .form-user-detail span{
+        display: none;
+    }
+
+
+    .forms-container{
+        width: calc(100% - 75px);
+        margin: 0 45px;  
+    }
+
+    .form-sidebar-links li a.form-active{
+        background-color: var(--backgroundColor);
+        color: var(--first-color);
+        padding: 5px 8px;
+        border-radius: 100%;
+    }
+
+    .form-sidebar-links li a.form-active>span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--first-color);
+    }
+
+   
+}

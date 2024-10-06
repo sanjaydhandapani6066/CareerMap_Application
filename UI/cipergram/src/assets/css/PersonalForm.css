@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.personal-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.personal-form-box{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 15px;
+    background-color: #faf9ff;
+}
+
+.personal-form-box .personal-progress{
+    position: relative;
+    padding: 1em;
+}
+
+.personal-logo{
+    font-size: 1.75em;
+    font-weight: 800;
+    padding: 40px 48px;
+    text-align: center;
+}
+
+.personal-logo a{
+    color: var(--text-color);
+    text-wrap: nowrap;
+}
+
+.personal-logo span{
+    padding: 5px 9px;
+    margin-inline: 5px;
+    font-size: 1rem;
+    background-color:  var(--first-color) ;
+    color: var(--backgroundColor);
+    border-radius: 100%;
+}
+
+.personal-progress ul.personal-progress-steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.personal-progress ul.personal-progress-steps li{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.personal-progress ul.personal-progress-steps li > span{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10em;
+    border-radius: 50%;
+    background-color: var(--grey);
+    color: var(--text-color);
+    z-index: 1;
+}
+
+
+.personal-progress ul.personal-progress-steps li > p{
+    position: absolute;
+    margin-left: 3rem;
+    text-wrap: nowrap;
+    
+}
+
+
+.personal-progress ul.personal-progress-steps li.active > span{
+    background-color: var(--text-color);
+    color: var(--backgroundColor);
+    border: 4px solid var(--dark-grey);
+    z-index: 1;
+}
+
+.personal-progress ul.personal-progress-steps li.completed > span{
+    background-color: var(--text-color);
+    color: var(--backgroundColor);
+    border: 4px solid var(--dark-grey);
+    z-index: 1;
+}
+
+.personal-progress ul.personal-progress-steps li:not(:last-child)::before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 2px;
+    height: 65px;
+    background-color: var(--dark-grey);
+}
+
+.personal-progress ul.personal-progress-steps li p span{
+    font-size: 0.75em;
+    color: var(--dark-grey);
+}
+
+.personal-form-box form{
+    width: 100%;
+    padding: 3em 1em;
+    background-color: var(--backgroundColor);
+    border-radius: 30px 30px 15px 15px;
+}
+
+.personal-form-box form > div{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.personal-form-box form > div p{
+    color: var(--dark-grey);
+    margin-bottom: 2em;
+}
+
+.personal-form-box form > div > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.personal-form-box form :where(input){
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: var(--first-color);
+    border: 1px solid var(--dark-grey);
+    background-color: transparent;
+}
+
+.personal-form-box form label{
+    font-size: 0.7em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.personal-form-box form .personal-grouping{
+    display: flex;
+    
+}
+
+.personal-form-box form .personal-grouping input{
+    max-width: 70px;
+    text-align: center;
+    margin-right: 1em;
+}
+.personal-form-one,
+.personal-form-two,
+.personal-form-three{
+    display: none;
+}
+
+.personal-form-one.personal-form-step.active-form,
+.personal-form-two.personal-form-step.active-form,
+.personal-form-three.personal-form-step.active-form
+{
+    display: block;
+}
+
+.personal-btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.personal-btn-group .personal-btnPrev,
+.personal-btn-group .personal-btnNext,
+.personal-btn-group .personal-btnSubmit{
+    background-color: var(--first-color);
+    color: var(--backgroundColor);
+    padding: 1em 2em;
+    border: 4px solid var(--first-color-alt);
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 700;
+
+}
+
+.personal-btn-group button:disabled{
+    background-color: var(--dark-grey);
+    color: var(--backgroundColor);
+    cursor: not-allowed;
+    border: 4px solid var(--grey);
+}
+
+.display-none{
+    display: none;
+}
+
+.personal-popup-container{
+    max-width: 290px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 6px;
+    position: absolute;
+    top: 90%;
+    left: 67%;
+    transform: translate(-50%, -50%);      
+    z-index: 1;  
+    overflow-x: hidden;
+    /* display: none; */
+}
+
+.personal-popup-container .personal-popup-img{
+    display: none;
+}
+
+.personal-popup-container h2{
+    font-size: 1em;
+    font-weight: 550;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.personal-popup-container p{
+    font-size: 0.7em;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.personal-popup-container .personal-popup-btn{
+    padding: 5px 7px;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    color: var(--backgroundColor);
+    font-size: 0.8em;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.personal-bg-svg i{
+    color: var(--first-color);
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.personal-progress ul.personal-progress-steps li:not(:last-child)::before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 2px;
+    height: 65px;
+    background-color: var(--dark-grey);
+}
+
+.personal-progress ul.personal-progress-steps li.completed:not(:last-child)::before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 2px;
+    height: 65px;
+    background-color: var(--first-color);
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .personal-form-box{
+        width: 100%;
+        flex-direction: row;
+
+    }
+
+    .personal-form-box .personal-progress{
+        flex: 1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+
+    .personal-bg-svg i{
+        color: var(--first-color);
+        font-size: 3.5em;
+        font-weight: 900;
+    }
+
+    .personal-logo a{
+        font-size: 0.8em;
+        margin: -48px -48px 48px;
+    }
+
+    .personal-progress ul.personal-progress-steps{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .personal-progress ul.personal-progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 2px;
+        height: 65px;
+        background-color: var(--dark-grey);
+    }
+
+    .personal-progress ul.personal-progress-steps li.completed:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        width: 2px;
+        height: 65px;
+        background-color: var(--first-color);
+    }
+
+    .personal-form-box form{
+        padding: 3em;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .personal-popup-container{
+        width: 400px;
+        background-color: transparent;
+        border-radius: 6px;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+        transform: translate(-50%, -50%);        
+    }
+
+    .personal-popup-container .personal-popup-img{
+        display: block;
+        width: 300px;
+    }
+
+    .personal-popup-container h2{
+        font-size: 1.5em;
+        font-weight: 700;
+        color: var(--first-color);
+    }
+
+    .personal-popup-container p{
+        font-size: 1em;
+        font-weight: 500;
+        color: var(--dark-grey);
+        margin-bottom: 20px;
+    }
+
+    .personal-popup-container .personal-popup-btn{
+        padding: 5px 15px;
+        outline: none;
+        border: none;
+        background-color: var(--first-color);
+        color: var(--backgroundColor);
+        border-radius: 3px;
+        font-size: 1em;
+        font-weight: 550;
+        cursor: pointer;
+    }
+}

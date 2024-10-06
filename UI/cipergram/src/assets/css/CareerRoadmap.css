@@ -1,0 +1,104 @@
+/* General Styling */
+.roadmap-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-container h1, .roadmap-container h2, .roadmap-container h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Header Section */
+.roadmap-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #6254b5;
+}
+
+.roadmap-personal-info h1 {
+    font-size: 2.5em;
+    color: #563eda;
+}
+
+.roadmap-personal-info p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+    margin-top: 30px;
+}
+.roadmap-section h2{
+    color: #563eda;
+    font-size: 1.8em;
+}
+.roadmap-timeline {
+    position: relative;
+    padding: 20px 0;
+    border-left: 3px solid #563eda;
+}
+
+.roadmap-timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.roadmap-timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #563eda;
+    border-radius: 50%;
+}
+
+.roadmap-timeline-content {
+    padding-left: 40px;
+}
+
+.roadmap-timeline-content h3 {
+    margin: 0;
+    font-size: 1.3em;
+    color: #563eda;
+}
+
+.roadmap-timeline-content p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.roadmap-timeline-content strong {
+    font-weight: 600;
+}
+
+/* Skills Section */
+.roadmap-skills-section {
+    margin-top: 30px;
+}
+
+.roadmap-skills-list {
+    list-style-type: none; /* Remove default list item markers */
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.roadmap-skill-item {
+    background-color: #563eda;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
